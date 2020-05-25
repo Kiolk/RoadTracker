@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RoadTracker</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="map_box_access_token" translatable="false">sk.eyJ1Ijoia2lvbGsiLCJhIjoiY2thbW55YTBlMTYzcDJzcGlvdG5peHZ0OCJ9.4aST1cwWMTnABhRebmWO-w</string>
+    <string name="map_menu_title">Map</string>
+    <string name="history_menu_item">History</string>
+    <string name="create_menu_item">Create</string>
+</resources>

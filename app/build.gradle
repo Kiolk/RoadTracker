@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.github.kiolk.roadtracker"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation libraries.kotlinStdLib
+    implementation libraries.appCompat
+    implementation libraries.constraintLayout
+    implementation libraries.recyclerView
+
+    implementation libraries.coreKtx
+    implementation libraries.coreX
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    androidTestImplementation libraries.coreTestX
+    implementation 'androidx.core:core:1.0.1'
+
+    implementation libraries.firebaseAnalytics
+    implementation libraries.firebaseCrashlytics
+    implementation libraries.firebaseCloudMessaging
+
+    implementation libraries.timber
+    implementation libraries.stecho
+
+    implementation libraries.conductor
+    implementation libraries.conductorDialog
+    implementation libraries.conductorSupport
+
+    implementation libraries.koinCore
+    implementation libraries.koinAndroid
+    implementation libraries.koinViewModel
+    testImplementation libraries.koinTest
+    androidTestImplementation libraries.koinTest
+
+    implementation libraries.googleMap
+    implementation libraries.serviceLocation
+
+    implementation libraries.butterKnife
+    kapt libraries.butterKnifeCompiler
+
+    implementation libraries.coroutinesCore
+    implementation libraries.coroutinesAndroid
+    androidTestImplementation libraries.coroutinesTest
+    testImplementation libraries.coroutinesTest
+
+    implementation libraries.lifecycleViewModelKtx
+    implementation libraries.lifecycleLiveDataKtx
+    implementation libraries.lifecycleRuntime
+    kapt libraries.lifecycleCompiler
+
+    implementation libraries.retrofit
+    implementation libraries.retrofitConverterGson
+    implementation libraries.okhttp
+    implementation libraries.okhttpLoggingInterceptor
+
+    implementation libraries.room
+    kapt libraries.annotationProcessorRoom
+    implementation libraries.roomKtx
+    androidTestImplementation libraries.roomTesting
+
+    implementation libraries.glide
+    kapt libraries.glideCompiler
+
+    debugImplementation libraries.leakcanary
+
+    testImplementation libraries.junit
+    testImplementation libraries.junitExtention
+    androidTestImplementation libraries.runner
+    androidTestImplementation libraries.espresso
+
+    implementation libraries.navigation
+    implementation libraries.navigationKtx
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0'
+
+}
