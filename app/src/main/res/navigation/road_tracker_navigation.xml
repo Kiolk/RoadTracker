@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/create"
-        android:name="com.github.kiolk.roadtracker.Create"
+        android:name="com.github.kiolk.roadtracker.presentation.screens.create.Create"
         android:label="fragment_create"
         tools:layout="@layout/fragment_create" />
 

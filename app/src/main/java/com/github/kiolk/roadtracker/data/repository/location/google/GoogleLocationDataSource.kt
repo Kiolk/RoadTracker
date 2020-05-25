@@ -62,9 +62,9 @@ class GoogleLocationDataSource(
     }
 
     private fun subscribeOnUpdate() {
-//        if (subscribersFlow.size > 1) {
-//            return
-//        }
+        if (subscribersFlow.size > 1) {
+            return
+        }
 
         val locationRequest = LocationRequest.create().apply {
             interval = INTERVAL
